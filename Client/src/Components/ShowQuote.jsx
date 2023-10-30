@@ -15,7 +15,7 @@ const ShowQuote = () => {
 
   const getRandomQuote = async () => {
     const response = await axios.get(
-      "https://random-quote-tawny.vercel.app/api/v1/quote/random-quote"
+      "https://random-quote-backend-api.vercel.app/api/v1/quote/random-quote"
     );
     const { quote, author, _id } = response.data;
     setData({
@@ -27,7 +27,7 @@ const ShowQuote = () => {
 
   const deleteQuote = async () => {
     const response = await axios.delete(
-      `https://random-quote-tawny.vercel.app/api/v1/quote/delete-quote/${data.quoteID}`
+      `https://random-quote-backend-api.vercel.app/api/v1/quote/delete-quote/${data.quoteID}`
     );
     alert("Quote Deleted");
     getRandomQuote();

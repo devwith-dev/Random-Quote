@@ -13,7 +13,7 @@ const UpdateQuote = () => {
   useEffect(() => {
     const fetchQuote = async () => {
       const response = await axios.get(
-        `https://random-quote-tawny.vercel.app/api/v1/quote/fetch-quote/${id}`
+        `https://random-quote-backend-api.vercel.app/api/v1/quote/fetch-quote/${id}`
       );
       const { quote, author } = response.data;
       setData({
@@ -31,7 +31,7 @@ const UpdateQuote = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.put(
-      `https://random-quote-tawny.vercel.app/api/v1/quote/edit-quote/${id}`,
+      `https://random-quote-backend-api.vercel.app/api/v1/quote/edit-quote/${id}`,
       data
     );
     window.location.href = "/";
