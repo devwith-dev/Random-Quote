@@ -14,7 +14,7 @@ const AddQuote = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      "http://localhost:9000/api/v1/quote/new-quote",
+      "https://random-quote-tawny.vercel.app/api/v1/quote/new-quote",
       data
     );
     window.location.href = "/";
