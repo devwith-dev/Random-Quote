@@ -17,7 +17,6 @@ const AddQuote = () => {
       "http://localhost:9000/api/v1/quote/new-quote",
       data
     );
-    console.log(response);
     window.location.href = "/";
   };
   return (

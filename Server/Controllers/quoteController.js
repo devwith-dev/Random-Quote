@@ -22,7 +22,6 @@ const createQuoteController = async (req, res) => {
 const fetchRandomQuoteCtrl = async (req, res) => {
   try {
     const randomQuote = await Quote.aggregate([{ $sample: { size: 1 } }]);
-    console.log(randomQuote);
     res.status(200).json(randomQuote[0]);
   } catch (error) {
     res.json({

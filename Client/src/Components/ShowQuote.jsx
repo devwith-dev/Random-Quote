@@ -17,7 +17,6 @@ const ShowQuote = () => {
     const response = await axios.get(
       "http://localhost:9000/api/v1/quote/random-quote"
     );
-    console.log(response);
     const { quote, author, _id } = response.data;
     setData({
       quote,
@@ -30,7 +29,6 @@ const ShowQuote = () => {
     const response = await axios.delete(
       `http://localhost:9000/api/v1/quote/delete-quote/${data.quoteID}`
     );
-    console.log(response);
     alert("Quote Deleted");
     getRandomQuote();
   };
